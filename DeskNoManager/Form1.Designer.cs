@@ -53,6 +53,7 @@
             this.lblNo1.Size = new System.Drawing.Size(137, 75);
             this.lblNo1.TabIndex = 0;
             this.lblNo1.Text = "000";
+            this.lblNo1.Visible = false;
             // 
             // timer1
             // 
@@ -62,6 +63,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.LightCoral;
             this.label1.Location = new System.Drawing.Point(220, 741);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 12);
@@ -76,6 +79,7 @@
             this.lblFree.Size = new System.Drawing.Size(71, 12);
             this.lblFree.TabIndex = 2;
             this.lblFree.Text = "剩余0个号码";
+            this.lblFree.Visible = false;
             // 
             // pic1
             // 
@@ -94,7 +98,7 @@
             this.pic2.BackColor = System.Drawing.Color.Transparent;
             this.pic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pic2.Image = ((System.Drawing.Image)(resources.GetObject("pic2.Image")));
-            this.pic2.Location = new System.Drawing.Point(364, 183);
+            this.pic2.Location = new System.Drawing.Point(359, 186);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(295, 396);
             this.pic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -106,7 +110,7 @@
             this.pic3.BackColor = System.Drawing.Color.Transparent;
             this.pic3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pic3.Image = ((System.Drawing.Image)(resources.GetObject("pic3.Image")));
-            this.pic3.Location = new System.Drawing.Point(661, 183);
+            this.pic3.Location = new System.Drawing.Point(659, 186);
             this.pic3.Name = "pic3";
             this.pic3.Size = new System.Drawing.Size(295, 396);
             this.pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -117,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::DeskNoManager.Properties.Resources.取号7;
             this.ClientSize = new System.Drawing.Size(1023, 762);
             this.Controls.Add(this.pic3);
             this.Controls.Add(this.pic2);

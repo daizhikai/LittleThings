@@ -89,6 +89,8 @@
     <Content Include="pics\7.png" />
     <Content Include="pics\8.png" />
     <Content Include="pics\9.png" />
+    <Content Include="Resources\取号7.jpg" />
+    <None Include="Resources\取号71.jpg" />
     <None Include="Resources\9.png" />
     <None Include="Resources\8.png" />
     <None Include="Resources\7.png" />

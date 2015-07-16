@@ -43,12 +43,18 @@ namespace DeskNoManager
                     MessageBox.Show("请先停止号码滚动");
                     return;
                 }
-                _isRunning = true;
-                lblNo1.Text = "000";
-                pic1.Image = pics[0];
-                pic2.Image = pics[0];
-                pic3.Image = pics[0];
+                if (_lotter.GetFreeCount() <= 0)
+                {
+                    MessageBox.Show("没有号码了");
 
+                    lblNo1.Text = "000";
+                    pic1.Image = pics[0];
+                    pic2.Image = pics[0];
+                    pic3.Image = pics[0];
+                    return;
+                }
+
+                _isRunning = true;
                 timer1.Start();
             }
             else if (e.KeyCode == Keys.Space)
@@ -60,6 +66,7 @@ namespace DeskNoManager
                 }
                 _isRunning = false;
                 timer1.Stop();
+                _lotter.Rock();
                 _lotter.Confirm();
                 if (_lotter.CurrDestNoInf != null)
                 {
@@ -108,16 +115,6 @@ namespace DeskNoManager
         {
             lock (_lockObj)
             {
-
-                _lotter.Rock();
-                if (_lotter.CurrDestNoInf == null)
-                {
-                    timer1.Stop();
-                    MessageBox.Show("没有号码了");
-                    _isRunning = false;
-                    return;
-                }
-
                 Random _r = new Random();
                 int no1 = _r.Next(0, 10);
                 int no2 = _r.Next(0, 10);
